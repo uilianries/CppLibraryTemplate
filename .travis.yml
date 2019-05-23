@@ -16,7 +16,6 @@ env:
     - CONAN_PACKAGE_NAME="SampleProject"
     - CONAN_USERNAME="LPeter1997"
     - CONAN_LOGIN_USERNAME="uilianries"
-    - CONAN_CHANNEL="dev"
     - CONAN_UPLOAD="https://api.bintray.com/conan/uilianries/conan"
     - CONAN_HEADER_ONLY="True"
     - CONAN_STABLE_BRANCH_PATTERN="release/\d+\.\d+\.\d+.*"
