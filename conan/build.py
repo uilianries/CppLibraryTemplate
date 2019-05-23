@@ -21,7 +21,7 @@ if __name__ == "__main__":
     builder = ConanMultiPackager(
         #username                = uname,
         #login_username          = login_uname,
-        reference               = reference#,
+        #reference               = reference#,
         #channel                 = channel,
         #upload                  = upload,
         #stable_branch_pattern   = branch_pat,
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     #if header_only == "False":
     #    builder.add_common_builds(pure_c=pure_c)
     #else:
-    builder.add()
+    builder.add({}, {}, {}, {})
 
     builder.run()
-    
+
