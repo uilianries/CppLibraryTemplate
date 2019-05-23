@@ -5,12 +5,12 @@ from cpt.packager import ConanMultiPackager
 
 if __name__ == "__main__":
     #login_uname = os.getenv('CONAN_LOGIN_USERNAME')
-    #uname       = os.getenv('CONAN_USERNAME')
-    package_ver = os.getenv('CONAN_PACKAGE_VERSION', os.getenv('TRAVIS_BRANCH'))
+    uname       = os.getenv('CONAN_USERNAME')
+    channel     = os.getenv('CONAN_CHANNEL', 'dev')
+    package_ver = os.getenv('CONAN_PACKAGE_VERSION', os.getenv('TRAVIS_BRANCH')) or "0.0.1-dev"
     package_ver = package_ver.replace('release/', '')
-    package_nam = os.getenv('CONAN_PACKAGE_NAME')
-    reference   = f'{package_nam}/{package_ver}'
-    #channel     = os.getenv('CONAN_CHANNEL', 'dev')
+    package_nam = os.getenv('CONAN_PACKAGE_NAME') or "SampleProject"
+    reference   = f'{package_nam}/{package_ver}@{uname}/{channel}'
     #upload      = os.getenv('CONAN_UPLOAD')
     #branch_pat  = os.getenv('CONAN_STABLE_BRANCH_PATTERN', r'release/\d+\.\d+\.\d+.*')
     #conanfile   = os.getenv('CONAN_CONANFILE', os.path.join('conan', 'conanfile.py'))
